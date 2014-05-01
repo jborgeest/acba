@@ -11,4 +11,7 @@
 // This functionality is driven by a database table
 // The Page() class takes care of this interaction.
 
-?>
+
+// Auto GET
+require 'inc/functions.php';
+require 'inc/init.php';
