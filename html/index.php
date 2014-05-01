@@ -13,5 +13,11 @@
 
 
 // Auto GET
+
+
+// Temporarily:
+// To access a page by ID, use:   xxxx.dogevm.com/index.php?page=<pageID>
+
+
 require 'inc/functions.php';
 require 'inc/init.php';
