@@ -12,7 +12,10 @@
 // The Page() class takes care of this interaction.
 		include 'inc/header.inc.php'; ?>
 
-        <!-- Add your site or application content here -->
-        <p>Auschina Business Association</p>
+        <section class="container">
+			<h1>Businesses</h1>
+			
+		</section>
+		
 
         <?php include 'inc/footer.inc.php';
