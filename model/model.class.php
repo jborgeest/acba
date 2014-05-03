@@ -7,6 +7,7 @@ class Model {
 	protected static $conn;
 	public static function conn(){
 		self::$conn = new mysqli('localhost', 'auschina', 'auschina', 'auschina');
+		self::$conn->set_charset("utf8");
 		return self::$conn;
 	}
 	public static function close(){

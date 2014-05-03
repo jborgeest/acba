@@ -17,11 +17,11 @@ html {
     line-height: 1.4;
 }
 ::-moz-selection {
-    background: green;
+    background: #c0392b;
     text-shadow: none;
 }
 ::selection {
-    background: green;
+    background: #c0392b;
     text-shadow: none;
 }
 hr {
@@ -53,14 +53,15 @@ textarea {
 
  
 body {
-	background: fuchsia;
+	background: #ddd;
 	font-family: 'Open Sans', sans-serif;
 }   
 
 /* header */
 
-header {
+header.home-header {
 	padding: 20px 0;
+	/* margin-bottom: 30px; */
 	width: 100%;
 	background: white;
 	height: 115px;
@@ -82,6 +83,7 @@ hgroup	{
 }
 
 .header-nav {
+	font-size: 12px;
 	background: #e74c3c;
 	color: white;
 }
@@ -94,13 +96,14 @@ hgroup	{
 
 .header-nav-li	{
 	display: inline-block;
-	padding: 8px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.25em;
 }
 
 .header-nav-link	{
+	display: block;
 	text-decoration: none;
+	padding: 8px 12px;
 	color: white;
 }
 
