@@ -1,15 +1,18 @@
 		<footer>
 			<div class="container footer-container">
-				<h1 class="footer-logo-img"><img src="/img/logo-footer.png" alt="Auschina Business Association"/></h1>
+				<p class="footer-logo-img"><img src="/img/logo-footer.png" alt="Auschina Business Association"/></p>
 				<nav>
 					<ul class="grid-container footer-nav-ul">
-						<ul class="grid-15 footer-ul">
+						<ul class="footer-ul">
+							<li>item</li>
 							<li>item</li>
 						</ul>
-						<ul class="grid-15 footer-ul">
+						<ul class="footer-ul">
+							<li>item</li>
 							<li>item</li>
 						</ul>
-						<ul class="grid-15 footer-ul">
+						<ul class="footer-ul">
+							<li>item</li>
 							<li>item</li>
 						</ul>
 					</ul>
