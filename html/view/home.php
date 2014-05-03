@@ -13,13 +13,6 @@
 
 include 'inc/header.inc.php';
 		?>
-
-		<section class="container">
-			<h1>Lorem Ipsum</h1>
-		</section>
-		
-	
-	<!--
 		
 	<section class="banner">
 			<img class="img-center" src="/img/4.png" />
@@ -38,7 +31,7 @@ include 'inc/header.inc.php';
 						<li>lorem ipsum dolor</li>
 					</ul>
 				</div>
-				<div class="grid-50 home-tier-2a"><a href="/ourwork" class="link-nodec">Read More >> </a></div>
+				<div class="grid-50 home-tier-2a"><a href="about" class="link-nodec">Read More >> </a></div>
 				<div class="grid-50 home-tier-2a hidden">a</div>
 			</div>
 		</section>
@@ -71,6 +64,5 @@ include 'inc/header.inc.php';
 			</div>
 		</section>
 		
-	-->
 		
 		<?php include 'inc/footer.inc.php';

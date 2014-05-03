@@ -51,7 +51,7 @@
 		<hr class="about-hr">
 
 		<section class="about-2d container grid-parent">
-			<h2 class="about-2d">Lorem Ipsum <a href="" class="about-2d">See more photos >> </a></h2>
+			<h2 class="about-2d">Lorem Ipsum <a href="/photo-gallery" class="about-2d">See more photos >> </a></h2>
 				<figure class="grid-25 about-2c-div"/>
 					<img src="/img/4.png" />
 				</figure>

@@ -3,7 +3,7 @@
 require_once '../model/page.class.php';
 
 // Router 
-$REQUEST_LINK = !empty($_GET['page']) ? $_GET['page'] : 'home';
+$REQUEST_LINK = !empty($_GET['page']) ? $_GET['page'] : '';
 $PAGE_ID = Page::resolvePageId($REQUEST_LINK);
 
 

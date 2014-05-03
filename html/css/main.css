@@ -108,7 +108,7 @@ hgroup	{
 }
 
 .header-container {
-
+	background-color: #fff;
 }
 
 /*end header*/
@@ -307,6 +307,42 @@ h1.about-gallery {
 	text-align: center;
 	padding-top: 1em;
 }
+
+/*dropdown menu for header*/
+
+ul.header-menu, ul.header-menu ul.header-sub-menu {
+    padding: 0;
+    margin: 0;
+}
+ul.header-menu li, ul.header-menu ul.header-sub-menu li {
+    list-style-type: none;
+    display: inline-block;
+}
+/*Link Appearance*/
+ul.header-menu li a, ul.header-menu li ul.header-sub-menu li a {
+    text-decoration: none;
+    color: #fff;
+    background: #e74c3c;
+    padding: 5px;
+    display: inline-block;
+}
+/*Make the parent of sub-menu relative*/
+ul.header-menu li {
+    position: relative;
+}
+/*sub menu*/
+ul.header-menu li ul.header-sub-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100px;
+	font-size: 0.75em;
+}
+ul.header-menu li:hover ul.header-sub-menu {
+    display: block;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
