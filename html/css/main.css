@@ -341,7 +341,7 @@ ul.header-menu li a, ul.header-menu li ul.header-sub-menu li a {
     text-decoration: none;
     color: #fff;
     background: #e74c3c;
-    padding: 5px;
+    padding: 10px 20px;
     display: inline-block;
 }
 /*Make the parent of sub-menu relative*/
