@@ -2,21 +2,25 @@
 require_once 'model.class.php';
 class Menu extends Model {
 	
-	public static function load(){
+	public static function generate(){
 		$menuCollations = array();
 		if ($res = self::conn()->query("select distinct collation from menuentry;")){
 			while ($row = $res->fetch_object()){
 				$menuCollations[] = $row->collation;
 			}
 		}
+		$menus = array();
 		foreach ($menuCollations as $menuCollation){
-			if ($res = self::conn()->query("select me.*, p.url_name link from menuentry me left join pages p on me.linked_page = p.id where collation = '$menuCollation' order by `order` asc;")){
+			if ($res = self::conn()->query("select me.*, p.url_name link from menuentry me left join page p on me.linked_page = p.id where collation = '$menuCollation' order by `order` asc;")){
 				while ($row = $res->fetch_object()){
-					$menu = new Menu($row->id);
+					$menuId = $row->collation.'.'.$row->linked_page;
+					$menu = new Menu($menuId);
 					$menu->load($row);
+					$menus[$menuCollation][] = $menu;
 				}
 			}
 		}
+		return $menus;
 	}
 	
 	private $id;
@@ -32,7 +36,7 @@ class Menu extends Model {
 	}
 	
 	public function link(){
-		return $this->data->link
+		return $this->data->link;
 	}
 	
 	public function label(){

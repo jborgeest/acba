@@ -3,7 +3,7 @@ require_once 'model.class.php';
 class Page extends Model {
 
 	public static function resolvePageId($requestLink){
-		if ($res = self::conn()->query("select id from page where url_name = $requestLink;")){
+		if ($res = self::conn()->query("select id from page where url_name = '$requestLink';")){
 			return $res->fetch_object()->id;
 		}
 		return 'home';

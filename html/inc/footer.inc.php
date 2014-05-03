@@ -1,17 +1,20 @@
 		<footer>
 			<div class="container footer-container">
-				<h1 class="footer-logo-img"><img src="/img/logo-footer.png" alt="Auschina Business Association"/></h1>
+				<hgroup class="footer-logo-img-wrapper">
+					<img src="/img/logo-footer.png" alt="Auschina Business Association"/>
+					<h2>中澳商会</h2>
+					<h2>Auschina Business Association, Inc</h2>
+				</hgroup>
 				<nav>
 					<ul class="grid-container footer-nav-ul">
+						<?php for ($x=0; $x<3; $x++){ ?>
 						<ul class="grid-15 footer-ul">
+							<li>dix</li>
+							<li>item</li>
+							<li>item</li>
 							<li>item</li>
 						</ul>
-						<ul class="grid-15 footer-ul">
-							<li>item</li>
-						</ul>
-						<ul class="grid-15 footer-ul">
-							<li>item</li>
-						</ul>
+						<?php } ?>
 					</ul>
 				</nav>
 			</div>
