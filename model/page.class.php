@@ -1,12 +1,21 @@
 <?php
 require_once 'model.class.php';
 class Page extends Model {
+
+	public static function resolvePageId($requestLink){
+		if ($res = self::conn()->query("select id from page where url_name = $requestLink;")){
+			return $res->fetch_object()->id;
+		}
+		return 'home';
+	}
 	
+	private $lang;
 	private $pageId;
 	private $pageHead = array();	// assoc
 	private $pageContent = array();		// assoc
 	
-	public function __construct($pageId = null){
+	public function __construct($pageId = null, $language = 'en'){
+		$this->lang = $language == 'zh' ? 'zh' : 'en';
 		if ($pageId){
 			$this->pageId = $pageId;
 			if ($res = self::conn()->query("select * from page where id = '$pageId';")){
@@ -62,6 +71,14 @@ class Page extends Model {
 	}
 	public function filename(){
 		return $this->pageHead->filename;
+	}
+	public function title(){
+	}
+	public function titleBilingual(){
+		return $this->pageHead->title_zh . ' | ' . $this->pageHead->title_en;
+	}
+	public function description(){
+		return $this->pageHead->{'description_'.$this->lang};
 	}
 	
 }

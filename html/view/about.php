@@ -10,47 +10,66 @@
 // Each page content-block needs to be switchable between English and Chinese
 // This functionality is driven by a database table
 // The Page() class takes care of this interaction.
-?><!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Auschina Business Association</title>
-        <meta name="description" content="Auschina Business Association">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+		include 'inc/header.inc.php'; ?>
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<section class="about-2a">
+			<h2 class="container">LOREM IPSUM</h2>
+			<div class="container">
+				<img class="image4" src="/img/4.png" />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+			</div>
+		</section>
+		
+		<section class="about-2b">
+			<h2 class="container">LOREM IPSUM</h2>
+			<div class="container">
+				<img class="image4b" src="/img/4.png" />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+			</div>
+		</section>
+		
+		<section class="about-2c">
+			<div class="about-2c container grid-parent">
+				<h2 class="about-2c">Lorem Ipsum</h2>
+				<figure class="grid-25"/>
+					<img src="/img/4.png" />
+				</figure>
+				<figure class="grid-25"/>
+					<img src="/img/4.png" />
+				</figure>
+				<figure class="grid-25"/>
+					<img src="/img/4.png" />
+				</figure>
+				<figure class="grid-25"/>
+					<img src="/img/4.png" />
+				</figure>
+				<p class="grid-25">lorem ipsum dolor</p>
+				<p class="grid-25">lorem ipsum dolor</p>
+				<p class="grid-25">lorem ipsum dolor</p>
+				<p class="grid-25">lorem ipsum dolor</p>
+			</div>
+			</section>
+		
+		<hr class="about-hr">
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/unsemantic-grid-responsive-tablet.css">        
-		<link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-		<?php include 'inc/header.inc.php'; ?>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+		<section class="about-2d container grid-parent">
+			<h2 class="about-2d">Lorem Ipsum <a href="/photo-gallery" class="about-2d">See more photos >> </a></h2>
+				<figure class="grid-25 about-2c-div"/>
+					<img src="/img/4.png" />
+				</figure>
+				<div class="grid-25 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
+				<figure class="grid-25 about-2c-div"/>
+					<img src="/img/4.png" />
+				</figure>
+				<div class="grid-25 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
+				<figure class="grid-25 about-2c-div"/>
+					<img src="/img/4.png" />
+				</figure>
+				<div class="grid-25 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
+				<figure class="grid-25 about-2c-div"/>
+					<img src="/img/4.png" />
+				</figure>
+				<div class="grid-25 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
+		</section>
+		
+		<hr class="about-hr">
 
-        <!-- Add your site or application content here -->
-        <p>Auschina Business Association</p>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <!-- <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script> -->
-    </body>
-</html>
+        <?php include 'inc/footer.inc.php';

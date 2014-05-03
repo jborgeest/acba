@@ -10,14 +10,12 @@
 // Each page content-block needs to be switchable between English and Chinese
 // This functionality is driven by a database table
 // The Page() class takes care of this interaction.
+		include 'inc/header.inc.php'; ?>
 
+        <section class="container">
+			<h1>Businesses</h1>
+			
+		</section>
+		
 
-// Auto GET
-
-
-// Temporarily:
-// To access a page by ID, use:   xxxx.dogevm.com/index.php?page=<pageID>
-
-
-require 'inc/functions.php';
-require 'inc/init.php';
+        <?php include 'inc/footer.inc.php';
