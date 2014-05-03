@@ -18,10 +18,12 @@ class Menu extends Model {
 			}
 		}
 	}
+	
 	private $id;
 	private $data;
 	
-	public function __construct($id){
+	public function __construct($id, $language = 'en'){
+		$this->lang = $language == 'zh' ? 'zh' : 'en';
 		$this->id = $id;
 	}
 	
@@ -33,11 +35,8 @@ class Menu extends Model {
 		return $this->data->link
 	}
 	
-	public function labels(){
-		return ( object ) array( 
-			'zh' => $this->data->label_zh,
-			'en' => $this->data->label_en
-		);
+	public function label(){
+		return $this->data->{'label_'.$this->lang};
 	}
 	
 }

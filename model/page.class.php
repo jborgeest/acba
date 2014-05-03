@@ -9,7 +9,6 @@ class Page extends Model {
 		return 'home';
 	}
 	
-	private $lang;
 	private $pageId;
 	private $pageHead = array();	// assoc
 	private $pageContent = array();		// assoc

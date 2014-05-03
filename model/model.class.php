@@ -15,7 +15,10 @@ class Model {
 	}
 	
 	
+	protected $lang;
+	
 	public function __construct(){
+		
 	}
 	
 	
