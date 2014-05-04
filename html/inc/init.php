@@ -4,25 +4,21 @@ require_once '../model/page.class.php';
 require_once '../model/menu.class.php';
 
 // Router 
-$REQUEST_LINK = !empty($_GET['page']) ? $_GET['page'] : '';
-$PAGE_ID = Page::resolvePageId($REQUEST_LINK);
+$request_link = !empty($_GET['page']) ? $_GET['page'] : '';
+$page_id = Page::resolvePageId($request_link);
 
-$is_home = $PAGE_ID == 'home';
+
+// Other config constants etc
+$config = getConfig();
+$base_url = $config->base_url;
+
+//
+$is_home = $page_id == 'home';
+// Make the nav menus
 $nav_menus = Menu::generate();
 
 /* ============================ */
 
-// echo '<pre>';
-// foreach ($menus as $collation => $submenus){
-	// echo "$collation has: ";
-	// foreach ($submenus as $submenu){
-		// echo "{$submenu->label()}[{$submenu->link()}], ";
-	// }
-	// echo PHP_EOL;
-// }
-// echo '</pre>';
-
-
 // # Go
-$page = new Page($PAGE_ID);
+$page = new Page($page_id);
 include 'view/'.$page->filename();

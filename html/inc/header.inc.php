@@ -16,32 +16,29 @@
     </head>
     <body>
 	<header <?php echo $is_home ? 'class="home-header"' : '' ?>>
-		<div class="header-container">
-			<div class="container">
-				<hgroup>
-					<h1 class="header-logo-img"><a href="#"><img src="/img/logo.png" alt="Auschina Business Association"/></a></h1>
-				</hgroup>
-				
-				<nav class="header-nav">
-					<ul class="header-nav-ul header-menu">
-						<?php foreach ($nav_menus as $collation => $navMenuGroup){ 	// foreach #1
-							$parentNavItem = array_shift($navMenuGroup);	// Grab the first one, we'll use it as the parentnav, remove it from the array.
-							?>
-						<li class="header-nav-li">
-							<a class="header-nav-link" href="<?php echo $parentNavItem->link() ?>"><?php echo $parentNavItem->label() ?></a>
-							<ul class="header-sub-menu">
-							<?php foreach ($navMenuGroup as $navItem){	// foreach #2 ?>
-								<li class="header-nav-li">
-									<a class="header-nav-link" href="<?php echo $navItem->link() ?>"><?php echo $navItem->label() ?></a> 
-								</li>
-							<?php } // end foreach #2 ?>
-							</ul>
-						</li>
-						<?php 
-						} // end foreach #1 ?>
-					</ul>
-				</nav>
-				
-			</div>
+		<div class="container header-container">
+			<hgroup>
+				<h1 class="header-logo-img-wrapper"><a href="<?php baseurl() ?>"><img src="/img/logo.png" alt="Auschina Business Association"/></a></h1>
+			</hgroup>
+			<nav class="header-nav">
+				<ul class="header-nav-ul header-menu">
+					<?php foreach ($nav_menus as $collation => $navMenuGroup){ 	// foreach #1
+						$parentNavItem = array_shift($navMenuGroup);	// Grab the first one, we'll use it as the parentnav, remove it from the array.
+						?>
+					<li class="header-nav-li">
+						<a class="header-nav-link" href="<?php echo $parentNavItem->link() ?>"><?php echo $parentNavItem->label() ?></a>
+						<ul class="header-sub-menu">
+						<?php foreach ($navMenuGroup as $navItem){	// foreach #2 ?>
+							<li class="header-nav-li">
+								<a class="header-nav-link" href="<?php echo $navItem->link() ?>"><?php echo $navItem->label() ?></a> 
+							</li>
+						<?php } // end foreach #2 ?>
+						</ul>
+					<!-- </li> Intentionally removed last li -->
+					<?php 
+					} // end foreach #1 ?>
+				</ul>
+			</nav>
+			
 		</div>
 	</header>

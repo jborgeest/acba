@@ -14,45 +14,38 @@
 include 'inc/header.inc.php';
 		?>
 		
-	<section class="banner">
-			<img class="img-center" src="/img/4.png" />
+		<section class="banner">
+			<img class="banner-image" src="/img/banner/sydney-landscape.jpg" />
 		</section>
 		
 		<section class="home-tier-2">
 			<div class="container grid-parent">
-				<div class="grid-50 home-tier-2a"><img src="/img/icon/aus.png" /></div>
-				<div class="grid-50 home-tier-2a"><img src="/img/icon/link.png" /></div>
-				
-				<div class="grid-50 home-tier-2a">lorem ipsum dolor</div>
 				<div class="grid-50 home-tier-2a">
-					<ul>
-						<li>lorem ipsum dolor</li>
-						<li>lorem ipsum dolor</li>
-						<li>lorem ipsum dolor</li>
-					</ul>
+					<h2><img src="/img/icon/aus.png" /> <?php heading('about') ?></h2>
+					<?php content('about') ?>
+					<a href="#">Read More &raquo;</a>
 				</div>
-				<div class="grid-50 home-tier-2a"><a href="about" class="link-nodec">Read More >> </a></div>
-				<div class="grid-50 home-tier-2a hidden">a</div>
+				<div class="grid-50 home-tier-2a">
+					<img src="/img/icon/link.png" />
+				</div>
 			</div>
 		</section>
 		
 		<section class="home-tier-3">
 			<div class="container padding-b">
-				<img src="img/4.png" />
+				<h1><img src="img/icons/" /></h1>
 			</div>
 			<div class="container grid-parent padding-a">
-				<figure class="grid-33 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-				<figure class="grid-33 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-				<figure class="grid-33 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-				<div class="grid-33 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
-				<div class="grid-33 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
-				<div class="grid-33 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
+				<div class="grid-33 about-2c-div">
+					<img src="img/logo/tinjianbinhai.jpg"/>
+				</div>
+				<div class="grid-33 about-2c-div">
+					<img src="img/logo/jinnaneda.gif"/>
+					
+				</div>
+				<div class="grid-33 about-2c-div">
+					
+				</div>
 			</div>
 			
 		</section>

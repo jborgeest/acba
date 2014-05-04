@@ -30,15 +30,16 @@ class Page extends Model {
 		return $this->pageHead;
 	}
 	
-	public function getContent($id = false){
-		$this->reloadContent();
+	public function getContent($id = false, $key = 'content'){
 		if ($id){
-			return $this->getContentById($id);
+			$langKey = $key.'_'.$this->lang;
+			return $this->getContentById($id)->$langKey;
 		}
-		return $this->pageContent;
+		return '';
 	}
 	
 	protected function getContentById($id){
+		$this->reloadContent();
 		$contentFullId = $this->pageId.'.'.$id;
 		if (array_key_exists($contentFullId, $this->pageContent)){
 			return $this->pageContent[$contentFullId];

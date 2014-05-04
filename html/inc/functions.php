@@ -1,17 +1,28 @@
 <?php
-function zheading($contentId){
-	heading($contentId, 'zh');
+// Function which gives us the configs
+function getConfig(){
+	require_once '../model/model.class.php';
+	$config = new StdClass();
+	if ($res = Model::conn()->query("select `key`, `value` from config;")){
+		while ($row = $res->fetch_object()){
+			$config->{$row->key} = $row->value;
+		}
+	}
+	return $config;
 }
-function zcontent($contentId){
-	content($contentId, 'zh');
+
+
+
+// Echo-ers
+function baseurl(){
+	global $base_url;
+	echo $base_url;
 }
-function heading($contentId, $lang = 'en'){
+function heading($contentId){
 	global $page;
-	$lang = 'heading_' . ($lang=='zh' ? 'zh' : 'en');
-	echo $page->getContent($contentId)->$lang;
+	echo $page->getContent($contentId, 'heading');
 }
-function content($contentId, $lang = 'en'){
+function content($contentId){
 	global $page;
-	$lang = 'content_' . ($lang=='zh' ? 'zh' : 'en');
-	echo $page->getContent($contentId)->$lang;
+	echo $page->getContent($contentId, 'content');
 }

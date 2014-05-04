@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600italic,700italic,400,600,700);
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 /* ==========================================================================
@@ -18,10 +18,12 @@ html {
 }
 ::-moz-selection {
     background: #c0392b;
+	color: white;
     text-shadow: none;
 }
 ::selection {
     background: #c0392b;
+	color: white;
     text-shadow: none;
 }
 hr {
@@ -56,42 +58,82 @@ body {
 	background: #ecf0f1;
 	font-family: 'Open Sans', sans-serif;
 }
-   
-hgroup	{
-	padding: 20px;
+
+section {
+	padding: 30px 0;
 }
 
-/* header */
-
-header.home-header {
-	padding: 20px 0;
-	/* margin-bottom: 30px; */
-	width: 100%;
-	background: white;
-	height: 120px;
-	z-index: 10;
-	position: relative;
+h1, h2, h3 {
+	text-align: left;
+	font-weight: 300;
 }
 
-header hgroup {
-	padding: 20px;
+a, a:link, a:visited {
+	color: #333;
 }
 
+/* GLOBALS */
 
 .container {
 	margin: 0 auto;
 	width: 1200px;
 }
 
-.header-logo-img {
+
+/* header
+header hgroup {
+	float: left;
+}
+.header-logo-img-wrapper img {
+	width: 280px;
+	vertical-align: top;
+}
+.header-logo-img-wrapper {
+	padding: 20px 0;
 	margin: 0 0 20px 0;
+}
+.header-nav {
+
+
+} */
+
+header {
+	width: 100%;
+	background: white;
+	padding: 20px 0;
+	/* margin-bottom: 30px; */
+	background: white;
+	height: 100px;
+	z-index: 10;
+	position: relative;	
+}
+header hgroup {
+	float: none;
+}
+header a, header a:link, header a:visited{
+	color: white;
+}
+	
+.header-logo-img-wrapper {
+	padding: 0;
+}
+.header-logo-img-wrapper img {
+	width: 450px;
 }
 
 .header-nav {
-	font-size: 12px;
+	font-size: 14px;
+	margin-left: 0;
 	background: #e74c3c;
 	color: white;
+	font-weight: 300;
+	font-spacing: -2px;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.6);
 }
+
+
 
 .header-nav-ul	{
 	list-style-type: none;
@@ -125,6 +167,10 @@ footer {
 	color: white;
 }
 
+footer hgroup	{
+	padding: 20px;
+}
+
 footer ul {
 	padding: 0 0 10px 0;
 }
@@ -132,6 +178,8 @@ footer ul {
 footer nav {
 	margin: 0 auto;
 }
+
+
 
 .footer-container {
 
@@ -186,15 +234,24 @@ li {
 }
 
 .banner {
+	padding: 0;
 	display: block;
 	position: relative;
 	width: 100%;
+	height: 500px;
 	z-index: 1;
 	background: #2c3e50;
+	overflow: hidden;
+	text-align: center;
+}
+.banner .banner-image {
+	width: 100%;
+	position: relative;
+	top: -500px;
 }
 
 .home-tier-2 {
-	text-align: center;
+	text-align: left;
 	padding: 20px 0 20px 0;
 	height: 180px;
 	background: #2c3e50;
@@ -202,7 +259,7 @@ li {
 }
 
 .home-tier-2a {
-	text-align: center;
+	text-align: left;
 	padding: 5px 0 5px 0;
 	background: #2c3e50;
 	color: #fff;
@@ -339,11 +396,15 @@ ul.header-menu > li {
 /*Link Appearance*/
 ul.header-menu a {
     text-decoration: none;
-    color: white;
-    padding: 15px 40px 15px 20px;
+    padding: 8px 20px;
 }
 ul.header-menu > li > a {
+	font-weight: 300;
     display: inline-block;
+	border-right: 1px solid #d62c1a;
+}
+ul.header-menu > li:hover > a {
+	background: #d62c1a;
 }
 /*Make the parent of sub-menu relative*/
 ul.header-menu li {
@@ -353,12 +414,15 @@ ul.header-menu li {
 ul.header-menu li ul.header-sub-menu {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 41px;
     left: 0;
 	font-size: 0.75em;
 	padding: 0 0;
 	margin: 0;
 	width: 300px; 
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+	border: 1px solid #e74c3c;
+	border-top: none;
 }
 
 
