@@ -250,7 +250,7 @@ li {
 	top: -500px;
 }
 
-.home-tier-2 {
+.home-tier-blue {
 	text-align: left;
 	padding: 20px 0 20px 0;
 	height: 180px;
@@ -258,11 +258,10 @@ li {
 	color: #fff;
 }
 
-.home-tier-2a {
-	text-align: left;
-	padding: 5px 0 5px 0;
-	background: #2c3e50;
-	color: #fff;
+.home-tier-blue h2 img {
+	height: 1.25em;
+	vertical-align: middle;
+	margin-right: .25em;
 }
 
 .grid-50.home-tier-2 {

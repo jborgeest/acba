@@ -18,22 +18,23 @@ include 'inc/header.inc.php';
 			<img class="banner-image" src="/img/banner/sydney-landscape.jpg" />
 		</section>
 		
-		<section class="home-tier-2">
+		<section class="home-tier-blue">
 			<div class="container grid-parent">
-				<div class="grid-50 home-tier-2a">
-					<h2><img src="/img/icon/aus.png" /> <?php heading('about') ?></h2>
+				<div class="grid-50">
+					<h2><img src="/img/icons/aus.png" /> <?php heading('about') ?></h2>
 					<?php content('about') ?>
 					<a href="#">Read More &raquo;</a>
 				</div>
-				<div class="grid-50 home-tier-2a">
-					<img src="/img/icon/link.png" />
+				<div class="grid-50">
+					<h2><img src="/img/icons/link.png" /></h2>
+					<?php content('links') ?>
 				</div>
 			</div>
 		</section>
 		
 		<section class="home-tier-3">
 			<div class="container padding-b">
-				<h1><img src="img/icons/" /></h1>
+				<h1><img src="img/icons/handshake.png" /></h1>
 			</div>
 			<div class="container grid-parent padding-a">
 				<div class="grid-33 about-2c-div">
