@@ -12,20 +12,20 @@
 // The Page() class takes care of this interaction.
 		include 'inc/header.inc.php'; ?>
 
-		<section class="about-gallery container grid-parent">
-			<h1 class="about-gallery">Lorem Ipsum</h1>
-				<figure class="grid-25 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-				<figure class="grid-25 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-				<figure class="grid-25 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-				<figure class="grid-25 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
+		<section class="about-staff">
+			<div class="container grid-parent clearfix">
+			<?php 
+			$staffKeys = array('staff1','staff2','staff3','staff4','staff5');
+			foreach ($staffKeys as $staffKey){?>
+				<div class="grid-20 col-center"/>
+					<div class="col-center-image">
+						<img src="/img/placeholder.png"/>
+					</div>
+					<h2><?php heading($staffKey) ?></h2>
+					<?php content($staffKey) ?>
+				</div>
+			<?php } ?>
+			</div>
 			<hr class="about-gallery">
 		</section>
 

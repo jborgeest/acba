@@ -2,15 +2,19 @@
 require_once 'model.class.php';
 class Business extends Model {
 	
-	public static function retrieveAll($lang = 'en'){
+	public static function retrieve($numResults = 1, $lang = 'en'){
+		$limitClause = $numResults === 'all' ? '' : "limit $numResults";
 		$businesses = array();
-		if ($res = self::conn()->query("select * from business;")){
+		if ($res = self::conn()->query("select * from business $limitClause;")){
 			while ($row = $res->fetch_object()){
 				$bus = new Business($row->id, $lang);
 				$businesses[] = $bus;
 			}
 		}
 		return $businesses;
+	}
+	public static function retrieveAll($lang = 'en'){
+		return self::retrieve('all', $lang);
 	}
 	
 	private $id;

@@ -9,6 +9,18 @@ class Page extends Model {
 		return 'home';
 	}
 	
+	public static function getPage($pageId, $language = 'en'){
+		return new Page($pageId, $language);
+	}
+	
+	public static function getAnyContent($pageContentId, $language = 'en'){
+		$col = "content_$language";
+		if ($res = self::conn()->query("select $col from pagecontent where id = '$pageContentId';")){
+			return $res->fetch_object()->$col;
+		}
+		return '';
+	}
+	
 	private $pageId;
 	private $pageHead = array();	// assoc
 	private $pageContent = array();		// assoc
@@ -66,6 +78,12 @@ class Page extends Model {
 	}
 	
 	// Settings getters
+	public function parentId(){
+		return $this->pageHead->parent_id;
+	}
+	public function link(){
+		return $this->url();
+	}
 	public function url(){
 		return $this->pageHead->url_name;
 	}
@@ -73,12 +91,16 @@ class Page extends Model {
 		return $this->pageHead->filename;
 	}
 	public function title(){
+		return $this->pageHead->{'title_'.$this->lang};
 	}
 	public function titleBilingual(){
 		return $this->pageHead->title_zh . ' | ' . $this->pageHead->title_en;
 	}
 	public function description(){
 		return $this->pageHead->{'description_'.$this->lang};
+	}
+	public function label(){
+		return $this->pageHead->{'label_'.$this->lang};
 	}
 	
 }

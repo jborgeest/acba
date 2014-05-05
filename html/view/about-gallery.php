@@ -11,29 +11,21 @@
 // This functionality is driven by a database table
 // The Page() class takes care of this interaction.
 		include 'inc/header.inc.php'; ?>
-		<section>
+		<section class="about-gallery">
 			<div class="container grid-parent clearfix">
 				<h1><?php heading('main') ?></h1>
 				<aside class="grid-20">
 					<?php sidebar('about') ?>
 				</aside>
-				<div class="grid-parent grid-80 ">
-					<figure class="grid-25 about-2c-div"/>
-						<img src="/img/4.png" />
+				<div class="grid-parent grid-80 clearfix">
+					<figure class="grid-50 about-2c-div"/>
+						<img src="/img/photo/i1.jpg" />
+						<img src="/img/photo/i2.jpg" />
 					</figure>
-					<div class="grid-25 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
-					<figure class="grid-25 about-2c-div"/>
-						<img src="/img/4.png" />
+					<figure class="grid-50 about-2c-div"/>
+						<img src="/img/photo/i3.jpg" />
+						<img src="/img/photo/i4.jpg" />
 					</figure>
-					<div class="grid-25 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
-					<figure class="grid-25 about-2c-div"/>
-						<img src="/img/4.png" />
-					</figure>
-					<div class="grid-25 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
-					<figure class="grid-25 about-2c-div"/>
-						<img src="/img/4.png" />
-					</figure>
-					<div class="grid-25 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
 				</div>
 			</div>
 		</section>

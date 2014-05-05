@@ -29,7 +29,7 @@ include 'inc/header.inc.php';
 				</div>
 				<div class="grid-66 home-connections">
 					<h2><img src="/img/icons/link.png" /> <?php heading('links') ?></h2>
-					<?php foreach (Business::retrieveAll() as $bus){ ?>
+					<?php foreach (Business::retrieve(4) as $bus){ ?>
 						<div class="business-tag">
 							<a href="#"><?php echo $bus->nameBilingual() ?></a>
 						</div>
@@ -56,14 +56,17 @@ include 'inc/header.inc.php';
 			
 		</section>
 		
-		<section class="tier-red">
+		<section class="tier-red tier-last">
 			<div class="container grid-parent clearfix">
 				<h2><?php heading('president') ?></h2>
 				<div class="grid-15">
-					<img class="image4" src="/img/4.png" />
+					<img class="wide-img" src="/img/placeholder-profile.jpg" />
 				</div>
 				<div class="grid-85">
 					<?php content('president') ?>
+					<div class="spaced">
+						<a href="about">Read about our association &raquo;</a>
+					</div>
 				</div>
 			</div>
 		</section>
