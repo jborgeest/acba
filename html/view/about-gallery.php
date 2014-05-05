@@ -11,22 +11,32 @@
 // This functionality is driven by a database table
 // The Page() class takes care of this interaction.
 		include 'inc/header.inc.php'; ?>
-
-		<section class="about-gallery container grid-parent">
-			<h1 class="about-gallery">Lorem Ipsum</h1>
-				<figure class="grid-25 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-				<figure class="grid-25 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-				<figure class="grid-25 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-				<figure class="grid-25 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-			<hr class="about-gallery">
+		<section>
+			<div class="container grid-parent clearfix">
+				<h1><?php heading('main') ?></h1>
+				<aside class="grid-20">
+					<?php sidebar('about') ?>
+				</aside>
+				<div class="grid-parent grid-80 ">
+					<figure class="grid-25 about-2c-div"/>
+						<img src="/img/4.png" />
+					</figure>
+					<div class="grid-25 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
+					<figure class="grid-25 about-2c-div"/>
+						<img src="/img/4.png" />
+					</figure>
+					<div class="grid-25 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
+					<figure class="grid-25 about-2c-div"/>
+						<img src="/img/4.png" />
+					</figure>
+					<div class="grid-25 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
+					<figure class="grid-25 about-2c-div"/>
+						<img src="/img/4.png" />
+					</figure>
+					<div class="grid-25 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
+				</div>
+			</div>
 		</section>
+		
 
         <?php include 'inc/footer.inc.php';

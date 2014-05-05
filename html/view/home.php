@@ -18,43 +18,53 @@ include 'inc/header.inc.php';
 			<img class="banner-image" src="/img/banner/sydney-landscape.jpg" />
 		</section>
 		
-		<section class="home-tier-blue">
-			<div class="container grid-parent">
-				<div class="grid-50">
+		<section class="tier-blue home-tier-first">
+			<div class="container grid-parent clearfix">
+				<div class="grid-33">
 					<h2><img src="/img/icons/aus.png" /> <?php heading('about') ?></h2>
 					<?php content('about') ?>
-					<a href="#">Read More &raquo;</a>
+					<div class="spaced">
+						<a href="about">Read More &raquo;</a>
+					</div>
 				</div>
-				<div class="grid-50">
-					<h2><img src="/img/icons/link.png" /></h2>
-					<?php content('links') ?>
+				<div class="grid-66 home-connections">
+					<h2><img src="/img/icons/link.png" /> <?php heading('links') ?></h2>
+					<?php foreach (Business::retrieveAll() as $bus){ ?>
+						<div class="business-tag">
+							<a href="#"><?php echo $bus->nameBilingual() ?></a>
+						</div>
+					<?php } ?>
 				</div>
 			</div>
 		</section>
 		
-		<section class="home-tier-3">
+		<section class="home-tier-partners">
 			<div class="container padding-b">
-				<h1><img src="img/icons/handshake.png" /></h1>
+				<h1><img src="img/icons/handshake.png" /> <?php heading('partners') ?></h1>
 			</div>
-			<div class="container grid-parent padding-a">
-				<div class="grid-33 about-2c-div">
-					<img src="img/logo/tinjianbinhai.jpg"/>
+			<div class="container grid-parent clearfix">
+				<div class="grid-33">
+					<img class="home-partner-logo" src="img/logo/tinjianbinhai.jpg"/>
 				</div>
-				<div class="grid-33 about-2c-div">
-					<img src="img/logo/jinnaneda.gif"/>
-					
+				<div class="grid-33">
+					<img class="home-partner-logo" src="img/logo/jinnaneda.gif"/>
 				</div>
-				<div class="grid-33 about-2c-div">
+				<div class="grid-33">
 					
 				</div>
 			</div>
 			
 		</section>
 		
-		<section class="home-tier-4">
-			<h2 class="container">LOREM IPSUM</h2>
-			<div class="container">
-				<img class="image4" src="/img/4.png" />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+		<section class="tier-red">
+			<div class="container grid-parent clearfix">
+				<h2><?php heading('president') ?></h2>
+				<div class="grid-15">
+					<img class="image4" src="/img/4.png" />
+				</div>
+				<div class="grid-85">
+					<?php content('president') ?>
+				</div>
 			</div>
 		</section>
 		
