@@ -145,8 +145,6 @@ header a, header a:link, header a:visited{
 	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.6);
 }
 
-
-
 .header-nav-ul	{
 	list-style-type: none;
 	margin: 0;
@@ -167,6 +165,33 @@ header a, header a:link, header a:visited{
 	/* Background arrow */
 	padding-right: 35px;
 }
+
+header .lang-toggle-wrapper {
+	float: right;
+	margin: 0 10px;
+	font-size: 0.9em;
+}
+header a.lang-toggle {
+	color: #2c3e50;
+	display: inline-block;
+	border: 1px solid #2c3e50;
+	padding: .25em .5em;
+	text-decoration: none;
+}
+header a.lang-toggle:hover {
+	background-color: #2c3e50;
+	color: white;
+    -webkit-transition: background-color 600ms linear;
+    -moz-transition: background-color 600ms linear;
+    -o-transition: background-color 600ms linear;
+    -ms-transition: background-color 600ms linear;
+    transition: background-color 600ms linear;
+}
+header a.lang-toggle.active {
+	color: red;
+	border-color: red;
+}
+
 /* 
 .header-container {
 	background-color: #fff;
@@ -482,6 +507,10 @@ ul.header-menu li:hover ul.header-sub-menu {
    Helper classes
    ========================================================================== */
 
+.inline-icon {
+	vertical-align: middle;
+} 
+   
 .spaced {
 	margin: 2em 0;
 } 

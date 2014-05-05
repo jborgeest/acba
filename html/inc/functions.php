@@ -1,4 +1,16 @@
 <?php
+// Language functions
+function lang(){
+	return !empty($_SESSION['lang']) ? $_SESSION['lang'] : 'en';
+}
+function checkLanguageChange(){
+	// Did anyone try to set the language?
+	if (!empty($_GET['lang'])){
+		$_SESSION['lang'] =  $_GET['lang'] == 'zh' ? 'zh' : 'en' ;
+	}
+}
+
+
 // Function which gives us the configs
 function getConfig(){
 	require_once '../model/model.class.php';
@@ -11,7 +23,9 @@ function getConfig(){
 	return $config;
 }
 
-// Echo-ers
+
+// == Echo-ers
+
 function config($key){
 	global $config;
 	if (property_exists($config, $key)){
@@ -22,10 +36,12 @@ function baseurl(){
 	global $config;
 	echo $config->base_url;
 }
+// Heading Generator (based on page + contentId)
 function heading($contentId){
 	global $page;
 	echo $page->getContent($contentId, 'heading');
 }
+// Content Generator (based on page + contentId)
 function content($contentId){
 	global $page;
 	if (strpos($contentId, '.') === false){
@@ -36,6 +52,7 @@ function content($contentId){
 	}
 }
 
+// Sidebar generator
 function sidebar($parentId){
 	$menu = Menu::sidebar($parentId);
 	echo '<h3>', $menu->heading, '</h3>';

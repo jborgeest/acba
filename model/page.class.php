@@ -9,12 +9,12 @@ class Page extends Model {
 		return 'home';
 	}
 	
-	public static function getPage($pageId, $language = 'en'){
-		return new Page($pageId, $language);
+	public static function getPage($pageId){
+		return new Page($pageId, parent::lang());
 	}
 	
-	public static function getAnyContent($pageContentId, $language = 'en'){
-		$col = "content_$language";
+	public static function getAnyContent($pageContentId){
+		$col = 'content_'.parent::lang();
 		if ($res = self::conn()->query("select $col from pagecontent where id = '$pageContentId';")){
 			return $res->fetch_object()->$col;
 		}
@@ -25,8 +25,8 @@ class Page extends Model {
 	private $pageHead = array();	// assoc
 	private $pageContent = array();		// assoc
 	
-	public function __construct($pageId = null, $language = 'en'){
-		$this->lang = $language == 'zh' ? 'zh' : 'en';
+	public function __construct($pageId = null){
+		$this->lang = parent::lang();
 		if ($pageId){
 			$this->pageId = $pageId;
 			if ($res = self::conn()->query("select * from page where id = '$pageId';")){

@@ -17,6 +17,10 @@
     <body>
 	<header <?php echo $is_home ? 'class="home-header"' : '' ?>>
 		<div class="container header-container">
+			<div class="lang-toggle-wrapper">
+				<a class="lang-toggle" href="?lang=en">EN</a>
+				<a class="lang-toggle" href="?lang=zh">中文</a>
+			</div>
 			<hgroup>
 				<h1 class="header-logo-img-wrapper">
 					<a href="<?php baseurl() ?>">

@@ -1,7 +1,9 @@
 		<footer>
 			<div class="container">
 				<div class="copyright">
-					<p>&copy; <?php $thisYear = date('Y'); echo $thisYear == '2014' ? $thisYear : '2014 - '.$thisYear ?> Auschina Business Association, Inc.  | <a href="<?php echo Page::getPage('aboutcontact')->link() ?>"><?php echo Page::getPage('aboutcontact')->label() ?></a> </p>
+					<p>&copy; <?php $thisYear = date('Y'); echo $thisYear == '2014' ? $thisYear : '2014 - '.$thisYear ?> Auschina Business Association, Inc.  | 
+						<a href="<?php echo Page::getPage('aboutcontact')->link() ?>"><?php echo Page::getPage('aboutcontact')->label() ?></a> 
+					</p>
 					<p></p> 
 				</div>
 				<div class="footer-description">

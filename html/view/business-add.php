@@ -22,7 +22,7 @@
 				<?php content('tba') ?>
 				
 				<div class="spaced" style="font-size: 1.5em; display: inline-block; padding: 10px 15px; background: white;">
-					<a href="mailto:<?php config('contact_email') ?>"><?php config('contact_email') ?></a>		
+					<img src="img/icons/mail.png" class="inline-icon"/> <a href="mailto:<?php config('contact_email') ?>"><?php config('contact_email') ?></a>		
 				</div>
 			</div>
 		</section>

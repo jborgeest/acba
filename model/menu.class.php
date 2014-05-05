@@ -2,7 +2,7 @@
 require_once 'model.class.php';
 class Menu extends Model {
 	
-	public static function generate($lang = 'en'){
+	public static function generate(){
 		$menuCollations = array();
 		if ($res = self::conn()->query("select distinct collation from menuentry;")){
 			while ($row = $res->fetch_object()){
@@ -13,7 +13,7 @@ class Menu extends Model {
 		foreach ($menuCollations as $menuCollation){
 			if ($res = self::conn()->query("select me.*, p.url_name link from menuentry me left join page p on me.linked_page=p.id where collation='$menuCollation' order by `order` asc;")){
 				while ($row = $res->fetch_object()){
-					$menu = new Menu($row->collation, $row->linked_page, $lang);
+					$menu = new Menu($row->collation, $row->linked_page, parent::lang());
 					$menus[$menuCollation][] = $menu;
 				}
 			}
@@ -58,8 +58,8 @@ class Menu extends Model {
 	private $id;
 	private $data;
 	
-	public function __construct($collation, $linked, $language = 'en'){
-		$this->lang = $language == 'zh' ? 'zh' : 'en';
+	public function __construct($collation, $linked){
+		$this->lang = parent::lang();
 		$this->id = $collation.'.'.$linked;
 		if ($res = self::conn()->query("select me.*, p.url_name link from menuentry me left join page p on me.linked_page = p.id where collation='$collation' and linked_page='$linked';")){
 			$this->data = $res->fetch_object();
