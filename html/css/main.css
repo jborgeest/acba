@@ -317,8 +317,9 @@ ul.sidebar-nav li {
 }
 .banner .banner-image {
 	width: 100%;
-	position: relative;
-	top: -500px;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
 }
 
 .tier-blue {
