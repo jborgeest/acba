@@ -9,12 +9,24 @@ class Page extends Model {
 		return 'home';
 	}
 	
+	public static function getPage($pageId){
+		return new Page($pageId, parent::lang());
+	}
+	
+	public static function getAnyContent($pageContentId){
+		$col = 'content_'.parent::lang();
+		if ($res = self::conn()->query("select $col from pagecontent where id = '$pageContentId';")){
+			return $res->fetch_object()->$col;
+		}
+		return '';
+	}
+	
 	private $pageId;
 	private $pageHead = array();	// assoc
 	private $pageContent = array();		// assoc
 	
-	public function __construct($pageId = null, $language = 'en'){
-		$this->lang = $language == 'zh' ? 'zh' : 'en';
+	public function __construct($pageId = null){
+		$this->lang = parent::lang();
 		if ($pageId){
 			$this->pageId = $pageId;
 			if ($res = self::conn()->query("select * from page where id = '$pageId';")){
@@ -30,15 +42,16 @@ class Page extends Model {
 		return $this->pageHead;
 	}
 	
-	public function getContent($id = false){
-		$this->reloadContent();
+	public function getContent($id = false, $key = 'content'){
 		if ($id){
-			return $this->getContentById($id);
+			$langKey = $key.'_'.$this->lang;
+			return $this->getContentById($id)->$langKey;
 		}
-		return $this->pageContent;
+		return '';
 	}
 	
 	protected function getContentById($id){
+		$this->reloadContent();
 		$contentFullId = $this->pageId.'.'.$id;
 		if (array_key_exists($contentFullId, $this->pageContent)){
 			return $this->pageContent[$contentFullId];
@@ -65,6 +78,12 @@ class Page extends Model {
 	}
 	
 	// Settings getters
+	public function parentId(){
+		return $this->pageHead->parent_id;
+	}
+	public function link(){
+		return $this->url();
+	}
 	public function url(){
 		return $this->pageHead->url_name;
 	}
@@ -72,12 +91,16 @@ class Page extends Model {
 		return $this->pageHead->filename;
 	}
 	public function title(){
+		return $this->pageHead->{'title_'.$this->lang};
 	}
 	public function titleBilingual(){
 		return $this->pageHead->title_zh . ' | ' . $this->pageHead->title_en;
 	}
 	public function description(){
 		return $this->pageHead->{'description_'.$this->lang};
+	}
+	public function label(){
+		return $this->pageHead->{'label_'.$this->lang};
 	}
 	
 }

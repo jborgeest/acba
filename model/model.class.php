@@ -5,6 +5,8 @@
 class Model {
 	
 	protected static $conn;
+	protected static $lang;
+	
 	public static function conn(){
 		self::$conn = new mysqli('localhost', 'auschina', 'auschina', 'auschina');
 		self::$conn->set_charset("utf8");
@@ -14,15 +16,11 @@ class Model {
 		self::$conn->close();
 	}
 	
-	
-	protected $lang;
-	
-	public function __construct(){
-		
+	public static function setLang($lang = 'en'){
+		self::$lang = $lang == 'zh' ? 'zh' : 'en';
 	}
-	
-	
-	
-	
+	public static function lang(){
+		return self::$lang;
+	}
 	
 }

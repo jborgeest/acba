@@ -12,8 +12,22 @@
 // The Page() class takes care of this interaction.
 		include 'inc/header.inc.php'; ?>
 
-        <section class="container">
-			<h1>Businesses</h1>
+        <section>
+			<div class="container grid-parent clearfix">
+				<h1><?php heading('assoc') ?></h1>
+				<aside class="grid-20">
+				<?php sidebar('business') ?>
+				</aside>
+				<div class="grid-80">				
+					<?php content('assoc') ?>
+					
+					<?php foreach (Business::retrieveAll() as $bus){ ?>
+					<div class="spaced">
+						<?php echo $bus->nameBilingual() ?>
+					</div>
+					<?php } ?>
+				</div>
+			</div>
 			
 		</section>
 		

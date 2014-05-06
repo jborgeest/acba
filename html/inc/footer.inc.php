@@ -1,13 +1,24 @@
 		<footer>
-			<div class="container footer-container">
-				<hgroup class="footer-logo-img-wrapper">
-					<img src="/img/logo-footer.png" alt="Auschina Business Association"/>
-					<h2>中澳商会</h2>
-					<h2>Auschina Business Association, Inc</h2>
-				</hgroup>
+			<div class="container">
+				<div class="copyright">
+					<p>&copy; <?php $thisYear = date('Y'); echo $thisYear == '2014' ? $thisYear : '2014 - '.$thisYear ?> Auschina Business Association, Inc.  | 
+						<a href="<?php echo Page::getPage('aboutcontact')->link() ?>"><?php echo Page::getPage('aboutcontact')->label() ?></a> 
+					</p>
+					<p></p> 
+				</div>
+				<div class="footer-description">
+					<hgroup class="footer-logo-img-wrapper clearfix">
+						<img src="/img/logo-footer.png" alt="Auschina Business Association"/>
+						<h2>中澳商会</h2>
+						<h2>Auschina Business Association, Inc</h2>
+					</hgroup>
+					<div class="footer-mission-statement">
+						<?php content('footer.mission') ?>
+					</div>
+				</div>
 				<nav>
 					<ul class="grid-container footer-nav-ul">
-						<?php for ($x=0; $x<3; $x++){ ?>
+						<?php for ($x=0; $x<0; $x++){ // Commented out, for future introduction? ?>
 						<ul class="grid-15 footer-ul">
 							<li>dix</li>
 							<li>item</li>

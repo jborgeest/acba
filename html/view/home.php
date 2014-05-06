@@ -14,53 +14,60 @@
 include 'inc/header.inc.php';
 		?>
 		
-	<section class="banner">
-			<img class="img-center" src="/img/4.png" />
+		<section class="banner">
+			<img class="banner-image" src="/img/banner/sydney-landscape.jpg" />
 		</section>
 		
-		<section class="home-tier-2">
-			<div class="container grid-parent">
-				<div class="grid-50 home-tier-2a"><img src="/img/icon/aus.png" /></div>
-				<div class="grid-50 home-tier-2a"><img src="/img/icon/link.png" /></div>
-				
-				<div class="grid-50 home-tier-2a">lorem ipsum dolor</div>
-				<div class="grid-50 home-tier-2a">
-					<ul>
-						<li>lorem ipsum dolor</li>
-						<li>lorem ipsum dolor</li>
-						<li>lorem ipsum dolor</li>
-					</ul>
+		<section class="tier-blue home-tier-first">
+			<div class="container grid-parent clearfix">
+				<div class="grid-33">
+					<h2><img src="/img/icons/aus.png" /> <?php heading('about') ?></h2>
+					<?php content('about') ?>
+					<div class="spaced">
+						<a href="about">Read More &raquo;</a>
+					</div>
 				</div>
-				<div class="grid-50 home-tier-2a"><a href="about" class="link-nodec">Read More >> </a></div>
-				<div class="grid-50 home-tier-2a hidden">a</div>
+				<div class="grid-66 home-connections">
+					<h2><img src="/img/icons/link.png" /> <?php heading('links') ?></h2>
+					<?php foreach (Business::retrieve(4) as $bus){ ?>
+						<div class="business-tag">
+							<a href="#"><?php echo $bus->nameBilingual() ?></a>
+						</div>
+					<?php } ?>
+				</div>
 			</div>
 		</section>
 		
-		<section class="home-tier-3">
+		<section class="home-tier-partners">
 			<div class="container padding-b">
-				<img src="img/4.png" />
+				<h1><img src="img/icons/handshake.png" /> <?php heading('partners') ?></h1>
 			</div>
-			<div class="container grid-parent padding-a">
-				<figure class="grid-33 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-				<figure class="grid-33 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-				<figure class="grid-33 about-2c-div"/>
-					<img src="/img/4.png" />
-				</figure>
-				<div class="grid-33 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
-				<div class="grid-33 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
-				<div class="grid-33 about-2c-div">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
+			<div class="container grid-parent clearfix">
+				<div class="grid-33">
+					<img class="home-partner-logo" src="img/logo/tinjianbinhai.jpg"/>
+				</div>
+				<div class="grid-33">
+					<img class="home-partner-logo" src="img/logo/jinnaneda.gif"/>
+				</div>
+				<div class="grid-33">
+					
+				</div>
 			</div>
 			
 		</section>
 		
-		<section class="home-tier-4">
-			<h2 class="container">LOREM IPSUM</h2>
-			<div class="container">
-				<img class="image4" src="/img/4.png" />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+		<section class="tier-red tier-last">
+			<div class="container grid-parent clearfix">
+				<h2><?php heading('president') ?></h2>
+				<div class="grid-15">
+					<img class="wide-img" src="/img/placeholder-profile.jpg" />
+				</div>
+				<div class="grid-85">
+					<?php content('president') ?>
+					<div class="spaced">
+						<a href="about">Read about our association &raquo;</a>
+					</div>
+				</div>
 			</div>
 		</section>
 		

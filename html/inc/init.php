@@ -1,28 +1,35 @@
 <?php
+@session_start();
+
 /* ===== CONFIGURATIONS ======= */
 require_once '../model/page.class.php';
 require_once '../model/menu.class.php';
+require_once '../model/business.class.php';
+
+// Language
+checkLanguageChange();
+$lang = lang();
+Model::setLang($lang); 
+
+// Timezone
+date_default_timezone_set(@date_default_timezone_get());	// We guess the timezone
 
 // Router 
-$REQUEST_LINK = !empty($_GET['page']) ? $_GET['page'] : '';
-$PAGE_ID = Page::resolvePageId($REQUEST_LINK);
+$request_link = !empty($_GET['page']) ? $_GET['page'] : '';
+$page_id = Page::resolvePageId($request_link);
 
-$is_home = $PAGE_ID == 'home';
-$nav_menus = Menu::generate();
+
+// Other config constants etc
+$config = getConfig();
+
+// 
+$is_home = $page_id == 'home';
+
+// Make the nav menus
+$nav_menus = Menu::generate($lang);
 
 /* ============================ */
 
-// echo '<pre>';
-// foreach ($menus as $collation => $submenus){
-	// echo "$collation has: ";
-	// foreach ($submenus as $submenu){
-		// echo "{$submenu->label()}[{$submenu->link()}], ";
-	// }
-	// echo PHP_EOL;
-// }
-// echo '</pre>';
-
-
 // # Go
-$page = new Page($PAGE_ID);
+$page = new Page($page_id, $lang);
 include 'view/'.$page->filename();
