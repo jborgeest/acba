@@ -17,7 +17,7 @@
 				<h1><?php heading('info') ?></h1>
 				
 				<div class="spaced">
-					<img class="img-center" src="img/4.png" />
+					<img class="img-center" src="img/banner/ausinfo.jpg" />
 				</div>
 				
 				<?php content('info') ?>
@@ -26,12 +26,34 @@
 				
 				<h2><?php heading('tourism') ?></h2>
 				<?php content('tourism') ?>
+					
+				<hr/>
+			
+				<h2><?php heading('seasons') ?></h2>
+				<?php content('seasons') ?>
 				
 				<hr/>
 				
-				<h2><?php heading('seasons') ?></h2>
-				<?php content('seasons') ?>
-			
+				<h2><?php heading('population') ?></h2>
+				<?php content('population') ?>
+				
+				<hr/>
+				
+				<h2><?php heading('education') ?></h2>
+				<?php content('education') ?>
+				
+				<hr/>
+				
+				<h2><?php heading('economy') ?></h2>
+				<?php content('economy') ?>
+				
+				<hr/>
+				
+				<h2><?php heading('visa') ?></h2>
+				<?php content('visa') ?>
+				
+				<a href="http://www.immi.gov.au/Work/Pages/Work.aspx">Department of Immigration and Border Protection</a>
+				
 			</div>
 		</section>
 
