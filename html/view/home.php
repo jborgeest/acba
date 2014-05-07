@@ -50,7 +50,7 @@ include 'inc/header.inc.php';
 					<img class="home-partner-logo" src="img/logo/jinnaneda.gif"/>
 				</div>
 				<div class="grid-33">
-					
+					<img class="home-partner-logo" src="img/logo/sagovt.jpg"/>
 				</div>
 			</div>
 			
