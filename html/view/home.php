@@ -15,7 +15,20 @@ include 'inc/header.inc.php';
 		?>
 		
 		<section class="banner">
-			<img class="banner-image" src="/img/banner/sydney-landscape.jpg" />
+			<div class="banner-inner">
+				<div class="cycle-slideshow"
+				data-cycle-fx="fade"
+				data-cycle-timeout="4000"
+				data-cycle-pause-on-hover="false"
+				data-cycle-speed="500"
+				>
+					<img class="banner-image" src="/img/banner/home/canberra.jpg" />
+					<img class="banner-image" src="/img/banner/home/barangaroo.jpg" />
+					<img class="banner-image" src="/img/banner/home/goldcoast.jpg" />
+					<img class="banner-image" src="/img/banner/home/sydney-landscape.jpg" />
+					<img class="banner-image" src="/img/banner/home/shanghai2.jpg" />
+				</div>			
+			</div>
 		</section>
 		
 		<section class="tier-blue home-tier-first">
@@ -58,8 +71,10 @@ include 'inc/header.inc.php';
 		
 		<section class="tier-red tier-last">
 			<div class="container grid-parent clearfix">
-				<h2><?php heading('president') ?></h2>
-				<div class="grid-15">
+				<div class="grid-100">
+					<h2><?php heading('president') ?></h2>
+				</div>
+				<div class="grid-15 hide-on-tablet hide-on-mobile">
 					<img class="wide-img" src="/img/placeholder-profile.jpg" />
 				</div>
 				<div class="grid-85">

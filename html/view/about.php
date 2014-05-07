@@ -14,8 +14,10 @@
 
 		<section class="tier-blue">
 			<div class="container grid-parent clearfix">
-				<h1><?php heading('mission') ?></h1>
-				<div class="grid-15">
+				<div class="grid-100">
+					<h1><?php heading('mission') ?></h1>
+				</div>
+				<div class="grid-15 hide-on-tablet hide-on-mobile">
 					<img src="/img/nsw-govt.jpg" class="wide-img"/>
 				</div>
 				<div class="grid-85">
@@ -32,6 +34,9 @@
 				<div class="grid-80">
 					<h2><?php heading('information') ?></h2>
 					<?php content('information') ?>
+					
+					<h2><?php heading('newbusiness') ?></h2>
+					<?php content('newbusiness') ?>
 				</div>				
 			</div>
 		</section>

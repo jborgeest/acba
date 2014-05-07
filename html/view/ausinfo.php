@@ -24,15 +24,23 @@
 				
 				<hr/>
 				
+				<h2><?php heading('government') ?></h2>
+				<?php content('government') ?>
+					
+				<hr/>
+				
 				<h2><?php heading('tourism') ?></h2>
 				<?php content('tourism') ?>
 					
 				<hr/>
-			
-				<h2><?php heading('seasons') ?></h2>
-				<?php content('seasons') ?>
 				
-				<hr/>
+				<div class="">
+					<h2><?php heading('visa') ?></h2>
+					<?php content('visa') ?>				
+				</div>
+				
+				<a href="http://www.immi.gov.au/Work/Pages/Work.aspx">Department of Immigration and Border Protection</a>			
+
 				
 				<h2><?php heading('population') ?></h2>
 				<?php content('population') ?>
@@ -49,10 +57,11 @@
 				
 				<hr/>
 				
-				<h2><?php heading('visa') ?></h2>
-				<?php content('visa') ?>
+				<h2><?php heading('seasons') ?></h2>
+				<?php content('seasons') ?>
 				
-				<a href="http://www.immi.gov.au/Work/Pages/Work.aspx">Department of Immigration and Border Protection</a>
+				<hr/>
+
 				
 			</div>
 		</section>
