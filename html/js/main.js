@@ -6,10 +6,13 @@
 
 $(function(){
 	
-	// Homepage banner
-	// @requires 'cycle2.jquery.min.js'
-
+	// Homepage animation
+	var $capWrap = $('.banner .movie-caption');
+	var $cap = $('.banner .movie-caption .movie-caption-text');
+	// $cap.hide();
+	// $capWrap.hide();
 	
+	// var original = $capWrap.
 	
 	
 });

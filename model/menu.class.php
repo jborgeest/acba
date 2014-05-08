@@ -4,13 +4,19 @@ class Menu extends Model {
 	
 	public static function generate(){
 		$menuCollations = array();
-		if ($res = self::conn()->query("select distinct collation from menuentry;")){
-			while ($row = $res->fetch_object()){
-				$menuCollations[] = $row->collation;
+		// if ($res = self::conn()->query("select distinct collation from menuentry;")){
+			// while ($row = $res->fetch_object()){
+				// $menuCollations[] = $row->collation;
+			// }
+		// }
+		if ($res = self::conn()->query("select `key`,`value` from config where `key`='menucollation_order';")){
+			if ($row = $res->fetch_object()){
+				$menuCollations = explode(',', $row->value);
 			}
 		}
 		$menus = array();
 		foreach ($menuCollations as $menuCollation){
+			$menuCollation = trim($menuCollation);
 			if ($res = self::conn()->query("select me.*, p.url_name link from menuentry me left join page p on me.linked_page=p.id where collation='$menuCollation' order by `order` asc;")){
 				while ($row = $res->fetch_object()){
 					$menu = new Menu($row->collation, $row->linked_page, parent::lang());
