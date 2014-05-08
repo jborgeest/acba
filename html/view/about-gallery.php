@@ -22,7 +22,7 @@
 				<div class="grid-parent grid-80 clearfix gallery">
 				
 					<div class="spaced">
-						<h1>Sydney, New South Wales</h1>
+						<h1><?php heading('syd') ?></h1>
 						<hr/>
 						<figure class="grid-50"/>
 							<a href="img/photo/syd/1.jpg" data-lightbox="gallery-sydney" data-title="The Chinese Gardens in Darling Harbour, Sydney, NSW"><img src="img/photo/thumb/syd/1.jpg" alt="image-1" /></a>
@@ -38,7 +38,7 @@
 					</div>
 					
 					<div class="spaced">
-						<h1>Melbourne, Victoria</h1>
+						<h1><?php heading('mel') ?></h1>
 						<hr/>
 						<figure class="grid-50"/>
 							<a href="img/photo/mel/1.jpg" data-lightbox="gallery-melbourne" data-title="Melbourne, VIC"><img src="img/photo/thumb/mel/1.jpg" alt="image-1" /></a>

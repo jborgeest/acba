@@ -21,6 +21,8 @@
 				
 				<div class="grid-20">
 				
+					<img class="wide-img" src="img/photo/beach.jpg"/>
+					<hr/>
 					<h1 class=""><?php heading('info') ?></h1>
 					
 				</div>
