@@ -15,6 +15,9 @@ include 'inc/header.inc.php';
 		?>
 		
 		<section class="banner">
+			<div class="movie-caption">
+				<div class="movie-caption-text">Welcome to Auschina Business Association, Inc.</div>
+			</div>
 			<div class="banner-inner">
 				<div class="cycle-slideshow"
 				data-cycle-fx="fade"
