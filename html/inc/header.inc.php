@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/unsemantic-grid-responsive-tablet.css">        
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/responsive.css">
+		<link href="css/lightbox.css" rel="stylesheet" />
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>

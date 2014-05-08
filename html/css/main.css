@@ -70,7 +70,6 @@ section {
 h1, h2, h3 {
 	text-align: left;
 	font-weight: 300;
-	letter-spacing: -1px;
 }
 h1 a, h2 a, h3 a {
 	text-decoration: none;
@@ -565,6 +564,30 @@ ul.header-sub-menu li a {
 }
 ul.header-menu li:hover ul.header-sub-menu {
     display: block;
+}
+
+.h2-strong h1,h2,a {
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.h2-strong h1 {
+	text-align: right;
+}
+
+.bottom-border {
+	padding-bottom: 12px;
+	border-bottom: 1px solid #000;
+}
+
+.h2-strong a:link {color:blue;}      /* unvisited link */
+.h2-strong a:visited {color:purple;}  /* visited link */
+.h2-strong a:hover {color:black;}  /* mouse over link */
+.h2-strong a:active {color:black;}  /* selected link */
+
+.gallery h1 {
+	text-align: center;
+	font-weight: 600;
 }
 
 /* ==========================================================================
