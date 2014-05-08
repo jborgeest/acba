@@ -43,7 +43,7 @@ class Menu extends Model {
 		}
 		
 		return ( object ) array(
-			'heading' => ucfirst($parentId),
+			'heading' => reset($pages),
 			'pages' => $pages
 		);
 		

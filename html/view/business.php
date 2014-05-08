@@ -12,9 +12,14 @@
 // The Page() class takes care of this interaction.
 		include 'inc/header.inc.php'; ?>
 
-        <section>
+		<section class="tier-blue">
 			<div class="container grid-parent clearfix">
 				<h1><?php heading('assoc') ?></h1>
+			</div>
+		</section>		
+		
+        <section>
+			<div class="container grid-parent clearfix">
 				<aside class="grid-20">
 				<?php sidebar('business') ?>
 				</aside>

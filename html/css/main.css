@@ -31,7 +31,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
+    margin: 2em auto !important; 
     padding: 0;
 }
 audio,
@@ -72,6 +72,12 @@ h1, h2, h3 {
 	font-weight: 300;
 	letter-spacing: -1px;
 }
+h1 a, h2 a, h3 a {
+	text-decoration: none;
+}
+h1 a:hover, h2 a:hover, h3 a:hover {
+	text-decoration: underline;
+}
 
 a, a:link, a:visited {
 	color: #333;
@@ -91,6 +97,24 @@ div.body-inner {
 }
 .content {
 	margin-bottom: 1em;
+}
+
+.content-table {
+	border: 1px solid #ccc;
+	margin: 1em 0;
+}
+.content-table td {
+	padding: 5px;
+	border: 1px solid #ccc;
+	vertical-align: top;
+}
+
+.ausinfo-visa-name {
+	min-width: 100px;
+	font-size: 1.25em;
+	background: #e74c3c;
+	color: white;
+	text-align: center;
 }
 
 /* header
@@ -311,11 +335,6 @@ ul.sidebar-nav li {
 	margin-bottom: .5em;
 }
 
-
-[class^=home-tier] {
-	z-index: 1
-}
-
 .banner {
 	padding: 0;
 	display: block;
@@ -340,24 +359,29 @@ ul.sidebar-nav li {
 }
 .banner .movie-caption {
 	position: absolute;
-	top: 40%;
-	left: 50%;
-	margin-top: -5em;
-	margin-left: -400px;
-	width: 800px;
+	top: 20%;
+	/* left: 50%; */
+	/* margin-left: -400px; */
 	background: url('../img/bg/20pc.png') transparent;
 	background: none rgba(0,0,0,0.2);
-	z-index: 20;
-}
-.banner .movie-caption .movie-caption-text {
-	padding: 1em 0;
+	z-index: 200;
+	text-align: left;
+	padding: .5em 1em;
 	color: white;
-	font-size: 3em;
-	letter-spacing: -1px;
+	font-size: 2em;
 	line-height: 1.25em;
 	text-shadow: 0 2px 4px #383E44;
 }
+.banner .movie-caption h2 {
+	margin: .25em 0;
+}
 
+/* == TIERS == */
+
+
+[class^=home-tier] {
+	z-index: 1
+}
 .tier-blue {
 	text-align: left;
 	background: url('../img/bg/blue-cityscape.png') no-repeat scroll center bottom transparent;
@@ -371,6 +395,9 @@ ul.sidebar-nav li {
 }
 .tier-blue a {
 	color: white;
+}
+.tier-white {
+	background: white;
 }
 
 /* == Home Tier stuff == */

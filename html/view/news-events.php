@@ -10,8 +10,8 @@
 
 		<section class="tier-blue">
 			<div class="container grid-parent clearfix">
-				<h1><?php heading('') ?></h1>
-				<?php echo content('') ?>
+				<h1><?php heading('events') ?></h1>
+				<?php echo content('events') ?>
 			</div>
 		</section>
 		

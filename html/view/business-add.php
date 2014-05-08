@@ -12,12 +12,15 @@
 // The Page() class takes care of this interaction.
 		include 'inc/header.inc.php'; ?>
 	
-        <section>
+		<section class="tier-blue">
 			<div class="container">
 				<h1><?php heading('info')?></h1>
 				<?php content('info') ?>
-				
-				<hr>
+			</div>
+		</section>
+	
+        <section class="tier-last">
+			<div class="container">
 				<h2><?php heading('tba') ?></h2>
 				<?php content('tba') ?>
 				

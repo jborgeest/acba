@@ -42,23 +42,31 @@ function heading($contentId){
 	echo $page->getContent($contentId, 'heading');
 }
 // Content Generator (based on page + contentId)
-function content($contentId){
+function content($contentId, $isSnippet = false){
 	global $page;
-	if (strpos($contentId, '.') === false){
+	if ($isSnippet){
+		echo $page->getContent($contentId, 'content');
+	}
+	elseif (strpos($contentId, '.') === false){
 		echo '<div class="content">', nl2br($page->getContent($contentId, 'content')), '</div>';
 	}
 	else {
 		echo '<div class="content">', nl2br(Page::getAnyContent($contentId)), '</div>';
 	}
 }
+function snippet($contentId){
+	return content($contentId, true);
+}
 
 // Sidebar generator
 function sidebar($parentId){
 	$menu = Menu::sidebar($parentId);
-	echo '<h3>', $menu->heading, '</h3>';
-	echo '<ul class="sidebar-nav">';
-	foreach ($menu->pages as $page){
-		echo '<li><a href="'.$page->url().'"> ', $page->label(), '</a></li>';
+	if ($menu->heading){
+		echo '<h3>', $menu->heading->label(), '</h3>';
+		echo '<ul class="sidebar-nav">';
+		foreach ($menu->pages as $page){
+			echo '<li><a href="'.$page->url().'"> ', $page->label(), '</a></li>';
+		}
+		echo '</ul>';	
 	}
-	echo '</ul>';
 }

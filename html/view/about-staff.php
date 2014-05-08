@@ -12,7 +12,7 @@
 // The Page() class takes care of this interaction.
 		include 'inc/header.inc.php'; ?>
 
-		<section class="about-staff">
+		<section class="about-staff tier-last">
 			<div class="container grid-parent clearfix">
 			<?php 
 			$staffKeys = array(
@@ -28,11 +28,17 @@
 						<img src="/img/profile/<?php echo $staffImage ?>"/>
 					</div>
 					<h2><?php heading($staffKey) ?></h2>
-					<?php content($staffKey) ?>
+					<small><?php content($staffKey) ?></small>
 				</div>
 			<?php } ?>
 			</div>
-			<hr class="about-gallery">
+			<hr class="container">
+			<div class="container grid-parent clearfix">			
+				<div class="push-20 grid-60 col-center">
+					<h2><?php heading('staffhonorary') ?></h2>
+					<?php content('staffhonorary') ?>
+				</div>
+			</div>
 		</section>
 
         <?php include 'inc/footer.inc.php';

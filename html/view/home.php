@@ -15,21 +15,28 @@ include 'inc/header.inc.php';
 		?>
 		
 		<section class="banner">
-			<div class="movie-caption">
+			<!-- <div class="">
 				<div class="movie-caption-text">Welcome to Auschina Business Association, Inc.</div>
-			</div>
+			</div> -->
 			<div class="banner-inner">
 				<div class="cycle-slideshow"
 				data-cycle-fx="fade"
 				data-cycle-timeout="4000"
 				data-cycle-pause-on-hover="false"
 				data-cycle-speed="500"
+				data-cycle-overlay=".movie-caption .cycle-overlay"
+				data-cycle-overlay-template="<div><h2>{{title}}</h2><div>{{desc}}</div>"
 				>
-					<img class="banner-image" src="/img/banner/home/canberra.jpg" />
-					<img class="banner-image" src="/img/banner/home/barangaroo.jpg" />
-					<img class="banner-image" src="/img/banner/home/goldcoast.jpg" />
-					<img class="banner-image" src="/img/banner/home/sydney-landscape.jpg" />
-					<img class="banner-image" src="/img/banner/home/shanghai2.jpg" />
+					<div class="container">
+						<div class="movie-caption">
+							<div class="cycle-overlay"></div>
+						</div>
+					</div>
+					<img class="banner-image" src="/img/banner/home/canberra.jpg" data-cycle-title="Canberra" data-cycle-desc="Australia's National Capital" />
+					<img class="banner-image" src="/img/banner/home/barangaroo.jpg" data-cycle-title="Barangaroo, Sydney" data-cycle-desc="The site of Sydney's second casino." />
+					<img class="banner-image" src="/img/banner/home/goldcoast.jpg" data-cycle-title="Gold Coast" data-cycle-desc="High growth lifestyle investment" />
+					<img class="banner-image" src="/img/banner/home/sydney-landscape.jpg" data-cycle-title="Sydney" data-cycle-desc="Australia's Business Capital" />
+					<img class="banner-image" src="/img/banner/home/shanghai2.jpg" data-cycle-title="Shanghai" data-cycle-desc="Asian Trade Capital" />
 				</div>			
 			</div>
 		</section>
@@ -40,7 +47,7 @@ include 'inc/header.inc.php';
 					<h2><img src="/img/icons/aus.png" /> <?php heading('about') ?></h2>
 					<?php content('about') ?>
 					<div class="spaced">
-						<a href="about">Read More &raquo;</a>
+						<a href="about"><?php snippet('readmore') ?> &raquo;</a>
 					</div>
 				</div>
 				<div class="grid-66 home-connections">
@@ -83,7 +90,7 @@ include 'inc/header.inc.php';
 				<div class="grid-85">
 					<?php content('president') ?>
 					<div class="spaced">
-						<a href="about">Read about our association &raquo;</a>
+						<a href="about"><?php snippet('readmore') ?> &raquo;</a>
 					</div>
 				</div>
 			</div>
