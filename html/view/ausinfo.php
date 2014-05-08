@@ -12,58 +12,82 @@
 // The Page() class takes care of this interaction.
 		include 'inc/header.inc.php'; ?>
 
-		<section>
-			<div class="container">
-				<h1><?php heading('info') ?></h1>
+		<hr class="container" />
+		<section class="h2-strong">
+		
+			<div class="container grid-parent clearfix">
 				
-				<div class="spaced">
-					<img class="img-center" src="img/banner/ausinfo.jpg" />
+				<hr class="container" />
+				
+				<div class="grid-20">
+				
+					<h1 class=""><?php heading('info') ?></h1>
+					
 				</div>
 				
-				<?php content('info') ?>
+				<div class="grid-80">
 				
-				<hr/>
-				
-				<h2><?php heading('government') ?></h2>
-				<?php content('government') ?>
+					<!-- <div class="spaced">
+						<img class="img-center" src="img/banner/ausinfo.jpg" />
+					</div> -->
 					
-				<hr/>
-				
-				<h2><?php heading('tourism') ?></h2>
-				<?php content('tourism') ?>
+					<p><?php content('info') ?></p>
 					
-				<hr/>
+					<hr/>
 				
-				<div class="">
-					<h2><?php heading('visa') ?></h2>
-					<?php content('visa') ?>				
+					<h2><?php heading('government') ?></h2>
+					<?php content('government') ?>
+						
+					<hr/>
+					
+					<h2><?php heading('tourism') ?></h2>
+					<?php content('tourism') ?>
+					
+					<a href="http://www.tourism.australia.com/">Tourism Australia</a>
+						
+					<hr/>
+					
+					<div class="">
+						<h2><?php heading('visa') ?></h2>
+						<?php content('visa') ?>				
+					</div>
+					
+					<a href="http://www.immi.gov.au/Work/Pages/Work.aspx">Department of Immigration and Border Protection</a>			
+
+					<hr/>
+					
+					<h2><?php heading('population') ?></h2>
+					<?php content('population') ?>
+					
+					<a href="http://www.abs.gov.au/">Australian Bureau of Statistics</a>
+					
+					<hr/>
+					
+					<h2><?php heading('education') ?></h2>
+					<?php content('education') ?>
+					
+					<a href="https://education.gov.au/">Department of Education</a>
+					
+					<hr/>
+					
+					<h2><?php heading('economy') ?></h2>
+					<?php content('economy') ?>
+					
+					<a href="http://wits.worldbank.org/CountryProfile/Country/AUS/Year/2012/Summary">World Bank Trade Summary Australia 2012</a>
+					
+					<hr/>
+					
+					<h2><?php heading('seasons') ?></h2>
+					<?php content('seasons') ?>
+					
+					<a href="http://www.bom.gov.au/">Bureau of Meteorology</a>
+
 				</div>
-				
-				<a href="http://www.immi.gov.au/Work/Pages/Work.aspx">Department of Immigration and Border Protection</a>			
-
-				
-				<h2><?php heading('population') ?></h2>
-				<?php content('population') ?>
-				
-				<hr/>
-				
-				<h2><?php heading('education') ?></h2>
-				<?php content('education') ?>
-				
-				<hr/>
-				
-				<h2><?php heading('economy') ?></h2>
-				<?php content('economy') ?>
-				
-				<hr/>
-				
-				<h2><?php heading('seasons') ?></h2>
-				<?php content('seasons') ?>
-				
-				<hr/>
-
-				
+					
 			</div>
+			
 		</section>
+		
+		<hr class="container" />
 
         <?php include 'inc/footer.inc.php';

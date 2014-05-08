@@ -70,7 +70,6 @@ section {
 h1, h2, h3 {
 	text-align: left;
 	font-weight: 300;
-	letter-spacing: -1px;
 }
 
 a, a:link, a:visited {
@@ -140,6 +139,7 @@ header a, header a:link, header a:visited{
 	background: #e74c3c;
 	color: white;
 	font-weight: 300;
+	font-spacing: -2px;
 	box-shadow: 0 1px 5px rgba(0,0,0,0.6);
 	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.6);
 	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.6);
@@ -333,29 +333,9 @@ ul.sidebar-nav li {
 	left: 0;
 	top: 50%;
 	margin-top: -400px;
-	z-index: 10;
 }
 .banner-image {
 	width: 100%;
-}
-.banner .movie-caption {
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	margin-top: -5em;
-	margin-left: -400px;
-	width: 800px;
-	background: url('../img/bg/20pc.png') transparent;
-	background: none rgba(0,0,0,0.2);
-	z-index: 20;
-}
-.banner .movie-caption .movie-caption-text {
-	padding: 1em 0;
-	color: white;
-	font-size: 3em;
-	letter-spacing: -1px;
-	line-height: 1.25em;
-	text-shadow: 0 2px 4px #383E44;
 }
 
 .tier-blue {
@@ -538,6 +518,30 @@ ul.header-sub-menu li a {
 }
 ul.header-menu li:hover ul.header-sub-menu {
     display: block;
+}
+
+.h2-strong h1,h2,a {
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.h2-strong h1 {
+	text-align: right;
+}
+
+.bottom-border {
+	padding-bottom: 12px;
+	border-bottom: 1px solid #000;
+}
+
+.h2-strong a:link {color:blue;}      /* unvisited link */
+.h2-strong a:visited {color:purple;}  /* visited link */
+.h2-strong a:hover {color:black;}  /* mouse over link */
+.h2-strong a:active {color:black;}  /* selected link */
+
+.gallery h1 {
+	text-align: center;
+	font-weight: 600;
 }
 
 /* ==========================================================================
