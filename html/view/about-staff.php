@@ -15,11 +15,17 @@
 		<section class="about-staff">
 			<div class="container grid-parent clearfix">
 			<?php 
-			$staffKeys = array('staff1','staff2','staff3','staff4','staff5');
-			foreach ($staffKeys as $staffKey){?>
+			$staffKeys = array(
+				'staff1'=>'../placeholder.png',
+				'staff2'=>'../placeholder.png',
+				'staff3'=>'../placeholder.png',
+				'staff4'=>'yuxuechun300.jpg',
+				'staff5'=>'wolf300.jpg'
+			);
+			foreach ($staffKeys as $staffKey=>$staffImage){?>
 				<div class="grid-20 col-center"/>
 					<div class="col-center-image">
-						<img src="/img/placeholder.png"/>
+						<img src="/img/profile/<?php echo $staffImage ?>"/>
 					</div>
 					<h2><?php heading($staffKey) ?></h2>
 					<?php content($staffKey) ?>
